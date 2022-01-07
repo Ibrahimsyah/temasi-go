@@ -10,7 +10,16 @@ message User {
   string password = 3;
   string full_name = 4;
   string phone_number = 5;
-  bool is_male = 6;
+  bool isMale = 6;
   string photo = 7;
   string status = 8;
+}
+
+message NewUser {
+  string email = 1;
+  string fullName = 2;
+  string phoneNumber = 3;
+  bool isMale = 4;
+  string password = 5;
+  string photo = 6;
 }
