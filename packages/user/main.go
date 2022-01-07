@@ -24,6 +24,11 @@ func (*UserServer) GetAllUsers(ctx context.Context, emp *user.EmptyRequest) (*us
 	}, nil
 }
 
+func (*UserServer) RegisterUser(ctx context.Context, newUser *user.NewUser) (*user.RegisterUserResponse, error) {
+
+	return &user.RegisterUserResponse{}, nil
+}
+
 func main() {
 	address := "0.0.0.0:5002"
 	lis, err := net.Listen("tcp", address)

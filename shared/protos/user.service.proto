@@ -12,6 +12,18 @@ message AllUserResponse {
   repeated User users = 1;
 }
 
+message RegisterUserResponse {
+  string fullName = 1;
+  string phoneNumber = 2;
+  string email = 3;
+  string userId = 4;
+  string token = 5;
+  string photo = 6;
+  bool isMale = 7;
+  bool status = 8;
+}
+
 service UserService {
   rpc GetAllUsers(EmptyRequest) returns (AllUserResponse) {}
+  rpc RegisterUser(NewUser) returns (RegisterUserResponse) {}
 }
