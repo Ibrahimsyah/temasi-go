@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "shared/pb/user";
+
+message User {
+  string id = 1;
+  string email = 2;
+  string password = 3;
+  string full_name = 4;
+  string phone_number = 5;
+  bool is_male = 6;
+  string photo = 7;
+  string status = 8;
+}
