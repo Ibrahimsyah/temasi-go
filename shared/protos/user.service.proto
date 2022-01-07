@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "shared/pb/user";
+
+import "shared/protos/user.model.proto";
+
+message EmptyRequest {}
+
+message AllUserResponse {
+  repeated User users = 1;
+}
+
+service UserService {
+  rpc GetAllUsers(EmptyRequest) returns (AllUserResponse) {}
+}

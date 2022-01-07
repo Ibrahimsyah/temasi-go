@@ -31,8 +31,6 @@ func main() {
 		log.Fatal("[Hello] Error ", err)
 	}
 
-	fmt.Println("[Hello] Service is running on ", address)
-
 	grpcSrv := grpc.NewServer()
 
 	hello.RegisterHelloServer(grpcSrv, &server{})
@@ -40,4 +38,6 @@ func main() {
 	if err := grpcSrv.Serve(lis); err != nil {
 		log.Fatal("[Hello] GRPC Error: ", err)
 	}
+
+	fmt.Println("[Hello] Service is running on ", address)
 }
